@@ -1,5 +1,5 @@
 {
-  "name": "game2048",
+  "name": "puzzle-game",
   "version": "0.1.0",
   "react": "jsx",
   "private": true,
