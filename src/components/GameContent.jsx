@@ -29,7 +29,7 @@ const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) 
         <button onClick={restartGame}>Restart game</button>
       </div>
       <div className="content__grid-container">
-        {gameMatrix.map((_, index) => <Tile index={index} key={index}/>)}
+        {gameMatrix.map((_, index) => <Tile index={index} key={index} />)}
       </div>
       <div className="move-count">Move count: {moveCount}</div>
     </>
@@ -44,11 +44,11 @@ const actions = {
 const mapToProps = ({
   level,
   gameMatrix,
-  moveCount
+  moveCount,
 }) => ({
   level,
   gameMatrix,
-  moveCount
+  moveCount,
 })
 
 const connected = connect(mapToProps, actions)

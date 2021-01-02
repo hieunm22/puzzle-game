@@ -5,6 +5,14 @@ const GAME_LEVELS = [
   { Index: 3, Size: 6, LevelName: 'Very Hard' },
 ]
 
+const MOVE_DIRECTION = [
+  'top',
+  'right',
+  'bottom',
+  'left',
+]
+
 export {
-  GAME_LEVELS
+  GAME_LEVELS,
+  MOVE_DIRECTION
 }

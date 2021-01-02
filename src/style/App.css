@@ -172,4 +172,9 @@
   cursor: default;
 }
 
+.move-count {
+  text-align: right;
+  margin: 15px 15px 0 0;
+}
 
+/* --------------------------------------- */

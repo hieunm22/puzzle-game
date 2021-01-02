@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { connect } from "redux-zero/react"
-import './App.css'
+import './style'
 import {
   newGame
 } from './actions'
