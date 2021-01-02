@@ -25,8 +25,14 @@ const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) 
   return (
     <>
       <div className="flex content__actions">
-        <button onClick={selectLevel}>Select other level</button>
-        <button onClick={restartGame}>Restart game</button>
+        <div className="content__actions-game flex other" onClick={selectLevel}>
+          <i className="fas fa-undo" />
+          Select other level
+        </div>
+        <div className="content__actions-game flex restart" onClick={restartGame}>
+          <i className="fas fa-undo" />
+          Restart game
+        </div>
       </div>
       <div className="content__grid-container">
         {gameMatrix.map((_, index) => <Tile index={index} key={index} />)}

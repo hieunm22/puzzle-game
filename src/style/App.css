@@ -4,6 +4,7 @@
 
 #root {
   width: 600px;
+  padding-top: 30px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -120,6 +121,29 @@
 
 .content__actions {
   margin-bottom: 15px;
+}
+
+.content__actions-game {
+  background-color: rgb(172, 120, 53);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 120px;
+  height: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.content__actions-game:hover {
+  background-color: rgb(218 174 118);
+}
+
+.other {
+  width: 150px;
+}
+
+.restart {
+  width: 120px;
 }
 
 .content__grid-container {
