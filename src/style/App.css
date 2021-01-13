@@ -138,6 +138,10 @@
   background-color: rgb(218 174 118);
 }
 
+.icon-text::after {
+  content: attr(content);
+}
+
 .other {
   width: 150px;
 }

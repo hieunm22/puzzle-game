@@ -7,31 +7,30 @@ import {
 import { shuffle } from '../common/helper'
 import Tile from './Tile'
 
-const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) => {
-  useEffect(() => {
-    const matrixArea = level * level
-    const defaultArray = Array.from({ length: matrixArea }).map((_, index) => (index + 1) % matrixArea)
-    const shuffleArray = shuffle(defaultArray)
-    moveAction(shuffleArray, 0)
-  }, [level, moveAction])
+const shuffleNewArray = level => {
+  const matrixArea = level * level
+  const defaultArray = Array.from({ length: matrixArea }).map((_, index) => (index + 1) % matrixArea)
+  return shuffle(level, defaultArray)
+}
 
+const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) => {
   const restartGame = () => {
-    const matrixArea = level * level
-    const defaultArray = Array.from({ length: matrixArea }).map((_, index) => (index + 1) % matrixArea)
-    const shuffleArray = shuffle(defaultArray)
+    const shuffleArray = shuffleNewArray(level)
     moveAction(shuffleArray, 0)
   }
+
+  useEffect(restartGame, [level, moveAction])
 
   return (
     <>
       <div className="flex content__actions">
         <div className="content__actions-game flex other" onClick={selectLevel}>
-          <i className="fas fa-undo" />
-          Select other level
+          <i className="fas fa-arrow-left" />
+          <span className="icon-text" content="Select other level" />
         </div>
         <div className="content__actions-game flex restart" onClick={restartGame}>
           <i className="fas fa-undo" />
-          Restart game
+          <span className="icon-text" content="Restart game" />
         </div>
       </div>
       <div className="content__grid-container">
