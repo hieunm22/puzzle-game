@@ -28,7 +28,7 @@ const SelectGameLevel = ({ level, newGame }) => {
       <div className="header__game-levels">
         {GAME_LEVELS.map((element, index) => {
           const classLevel = classNames(
-            { 'header__level': true },
+            { 'flex header__level': true },
             { 'selected': index === selectedLevel - 3 }
           )
           return (
@@ -37,8 +37,9 @@ const SelectGameLevel = ({ level, newGame }) => {
               key={index}
               onClick={setLevel(element.Size)}
             >
-              {element.Size} * {element.Size}
-              {index < GAME_LEVELS.length && <br />}
+              <span className="header__level-size" content={`${element.Size} * ${element.Size}`} />
+              <span className="header__level-name" content={element.LevelName} />
+              
             </div>
           )
         })}
