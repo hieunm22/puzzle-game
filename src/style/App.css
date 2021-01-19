@@ -2,8 +2,12 @@
   text-align: center;
 }
 
+:root {
+  --width: 420px;
+}
+
 #root {
-  width: 600px;
+  width: var(--width);
   padding-top: 30px;
   max-width: 100%;
   margin: 0 auto;
@@ -27,70 +31,9 @@
   text-align: center;
 }
 
-.aspect-ratio-11 {
-  margin-top: 100%;
-}
-
-.yellow {
-  background-color: yellowgreen;
-}
-
 .white-space {
   white-space: pre-wrap;
 }
-
-/* --------------------------------------- */
-
-.no-content:after { content: '\00a0'; }
-.content-1:after { content: '1'; }
-.content-2:after { content: '2'; }
-.content-3:after { content: '3'; }
-.content-4:after { content: '4'; }
-.content-5:after { content: '5'; }
-.content-6:after { content: '6'; }
-.content-7:after { content: '7'; }
-.content-8:after { content: '8'; }
-.content-9:after { content: '9'; }
-.content-10:after { content: '10'; }
-.content-11:after { content: '11'; }
-.content-12:after { content: '12'; }
-.content-13:after { content: '13'; }
-.content-14:after { content: '14'; }
-.content-15:after { content: '15'; }
-.content-16:after { content: '16'; }
-.content-17:after { content: '17'; }
-.content-18:after { content: '18'; }
-.content-19:after { content: '19'; }
-.content-20:after { content: '20'; }
-.content-21:after { content: '21'; }
-.content-22:after { content: '22'; }
-.content-23:after { content: '23'; }
-.content-24:after { content: '24'; }
-.content-25:after { content: '25'; }
-.content-26:after { content: '26'; }
-.content-27:after { content: '27'; }
-.content-28:after { content: '28'; }
-.content-29:after { content: '29'; }
-.content-30:after { content: '30'; }
-.content-31:after { content: '31'; }
-.content-32:after { content: '32'; }
-.content-33:after { content: '33'; }
-.content-34:after { content: '34'; }
-.content-35:after { content: '35'; }
-.content-36:after { content: '36'; }
-.content-37:after { content: '37'; }
-.content-38:after { content: '38'; }
-.content-39:after { content: '39'; }
-.content-40:after { content: '40'; }
-.content-41:after { content: '41'; }
-.content-42:after { content: '42'; }
-.content-43:after { content: '43'; }
-.content-44:after { content: '44'; }
-.content-45:after { content: '45'; }
-.content-46:after { content: '46'; }
-.content-47:after { content: '47'; }
-.content-48:after { content: '48'; }
-.content-49:after { content: '49'; }
 
 /* --------------------------------------- */
 
@@ -102,7 +45,8 @@
 }
 
 .header__game-levels {
-  margin-left: 20px;
+  margin-left: 10px;
+  max-width: calc(100% - 20px);
 }
 
 .header__level {
@@ -116,13 +60,25 @@
   background-color: #d6d6d6;
 }
 
+.header__level:hover .header__level-name {
+  visibility: visible;
+}
+
 .header__level.selected {
   background-color: #c3c3c3;
+}
+
+.header__level.selected .header__level-name {
+  visibility: visible;
 }
 
 .header__level-size::after {
   content: attr(content);
   margin-left: 15px;
+}
+
+.header__level-name {
+  visibility: hidden;
 }
 
 .header__level-name::after {
@@ -177,54 +133,9 @@
   background-color: rgb(172, 120, 53);
 }
 
-.tile-container {
-  line-height: 30px;
-  padding-top: calc(50% - 15px);
-  padding-bottom: calc(50% - 15px);
-  cursor: pointer;
-  background-color: white;
-}
-
-.tile-container.has-content:hover {
-  background-color: #d6d6d6;
-}
-
-.content__tile {
-  font-weight: bold;
-  margin: 2px;
+.tile__container {
+  margin-bottom: -4px;
   border: solid 1px gray;
-  flex-grow: 1;
-}
-
-.content__tile_3 {
-  font-size: 50pt;
-  width: calc(100% / 3 - 7px);
-}
-
-.content__tile_4 {
-  font-size: 40pt;
-  width: calc(100% / 4 - 7px);
-}
-
-.content__tile_5 {
-  font-size: 30pt;
-  width: calc(100% / 5 - 7px);
-}
-
-.content__tile_6 {
-  font-size: 25pt;
-  width: calc(100% / 6 - 7px);
-}
-
-.content__tile_7 {
-  font-size: 25pt;
-  width: calc(100% / 7 - 7px);
-}
-
-.no-content {
-  border: none;
-  background-color: transparent;
-  cursor: default;
 }
 
 .move-count {

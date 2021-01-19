@@ -2,7 +2,7 @@
   @keyframes move-right-6 {
     0% {
       position: relative;
-      left: -100px;
+      left: -70px;
     }
     100% {
       position: relative;
@@ -17,7 +17,7 @@
   @keyframes move-left-6 {
     0% {
       position: relative;
-      right: -100px;
+      right: -70px;
     }
     100% {
       position: relative;
@@ -32,7 +32,7 @@
   @keyframes move-top-6 {
     0% {
       position: relative;
-      bottom: -100px;
+      bottom: -70px;
     }
     100% {
       position: relative;
@@ -47,7 +47,7 @@
   @keyframes move-bottom-6 {
     0% {
       position: relative;
-      top: -100px;
+      top: -70px;
     }
     100% {
       position: relative;
@@ -64,7 +64,7 @@
   @keyframes move-right-5 {
     0% {
       position: relative;
-      left: -120px;
+      left: -84px;
     }
     100% {
       position: relative;
@@ -79,7 +79,7 @@
   @keyframes move-left-5 {
     0% {
       position: relative;
-      right: -120px;
+      right: -84px;
     }
     100% {
       position: relative;
@@ -94,7 +94,7 @@
   @keyframes move-top-5 {
     0% {
       position: relative;
-      bottom: -120px;
+      bottom: -84px;
     }
     100% {
       position: relative;
@@ -109,7 +109,7 @@
   @keyframes move-bottom-5 {
     0% {
       position: relative;
-      top: -120px;
+      top: -84px;
     }
     100% {
       position: relative;
@@ -126,7 +126,7 @@
   @keyframes move-right-4 {
     0% {
       position: relative;
-      left: -150px;
+      left: -105px;
     }
     100% {
       position: relative;
@@ -141,7 +141,7 @@
   @keyframes move-left-4 {
     0% {
       position: relative;
-      right: -150px;
+      right: -105px;
     }
     100% {
       position: relative;
@@ -156,7 +156,7 @@
   @keyframes move-top-4 {
     0% {
       position: relative;
-      bottom: -150px;
+      bottom: -105px;
     }
     100% {
       position: relative;
@@ -171,7 +171,7 @@
   @keyframes move-bottom-4 {
     0% {
       position: relative;
-      top: -150px;
+      top: -105px;
     }
     100% {
       position: relative;
@@ -188,7 +188,7 @@
   @keyframes move-right-3 {
     0% {
       position: relative;
-      left: -198px;
+      left: -140px;
     }
     100% {
       position: relative;
@@ -203,7 +203,7 @@
   @keyframes move-left-3 {
     0% {
       position: relative;
-      right: -198px;
+      right: -140px;
     }
     100% {
       position: relative;
@@ -218,7 +218,7 @@
   @keyframes move-top-3 {
     0% {
       position: relative;
-      bottom: -198px;
+      bottom: -140px;
     }
     100% {
       position: relative;
@@ -233,7 +233,8 @@
   @keyframes move-bottom-3 {
     0% {
       position: relative;
-      top: -198px;
+      top: -140px;
+      /* top: -calc(var(--width) / 3 - 2px); */
     }
     100% {
       position: relative;

@@ -7,20 +7,14 @@ import {
 import { shuffle } from '../common/helper'
 import Tile from './Tile'
 
-const shuffleNewArray = level => {
-  const matrixArea = level * level
-  const defaultArray = Array.from({ length: matrixArea }).map((_, index) => (index + 1) % matrixArea)
-  return shuffle(level, defaultArray)
-}
-
 const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) => {
   const restartGame = () => {
-    const shuffleArray = shuffleNewArray(level)
+    const shuffleArray = shuffle(level)
     moveAction(shuffleArray, 0)
   }
 
   useEffect(restartGame, [level, moveAction])
-
+  
   return (
     <>
       <div className="flex content__actions">
