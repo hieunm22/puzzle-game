@@ -7,6 +7,10 @@ import {
 import { shuffle } from '../common/helper'
 import Tile from './Tile'
 
+const showSettings = e => {
+
+}
+
 const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) => {
   const restartGame = () => {
     const shuffleArray = shuffle(level)
@@ -20,11 +24,15 @@ const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) 
       <div className="flex content__actions">
         <div className="content__actions-game flex other" onClick={selectLevel}>
           <i className="fas fa-arrow-left" />
-          <span className="icon-text" content="Select other level" />
+          <span className="icon-text" content="Select level" />
+        </div>
+        <div className="content__actions-game flex settings" onClick={showSettings}>
+          <i className="fas fa-cog" />
+          <span className="icon-text" content="Settings" />
         </div>
         <div className="content__actions-game flex restart" onClick={restartGame}>
           <i className="fas fa-undo" />
-          <span className="icon-text" content="Restart game" />
+          <span className="icon-text" content="Restart" />
         </div>
       </div>
       <div className="content__grid-container">

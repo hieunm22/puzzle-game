@@ -21,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "publish": "react-scripts build && mv build html && docker cp html/ nginx_puzzle:/usr/share/nginx && rm -rf html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

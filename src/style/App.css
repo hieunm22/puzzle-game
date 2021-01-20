@@ -121,11 +121,15 @@
 }
 
 .other {
-  width: 150px;
+  width: 105px;
+}
+
+.settings {
+  width: 85px;
 }
 
 .restart {
-  width: 120px;
+  width: 75px;
 }
 
 .content__grid-container {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { connect } from "redux-zero/react"
-import { GAME_LEVELS } from "./../common/constants"
+import { GAME_LEVELS } from "../common/constants"
 import classNames from 'classnames/bind'
 import { 
   newGame
 } from '../actions'
 
-const SelectGameLevel = ({ level, newGame }) => {
+const GameLevel = ({ level, newGame }) => {
   const [selectedLevel, setSelectedLevel] = useState(level)
 
   const setLevel = level => e => {
@@ -71,4 +71,4 @@ const mapToProps = ({
 
 const connected = connect(mapToProps, actions)
 
-export default connected(SelectGameLevel)
+export default connected(GameLevel)
