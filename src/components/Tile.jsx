@@ -66,16 +66,17 @@ const Tile = props => {
     moveAction
   } = props
   const element = gameMatrix[index]
+  const matrixArea = level * level
 
   const mainClass = classNames(
     { [`inline tile__container content-${element}`]: true },
     { [`move-top-${level}`]: 
       (moveDirection === 0 && clickedIndex === index + level) 
-      || (moveDirection === -1 && index === 0) },
+      || (moveDirection === -1 && index === matrixArea + 1) },
     { [`move-right-${level}`]: moveDirection === 1 && clickedIndex === index - 1 },
     { [`move-bottom-${level}`]: 
       (moveDirection === 2 && clickedIndex === index - level)
-      || (moveDirection === -2 && index === 1) },
+      || (moveDirection === -2 && index === level * level - level + 1) },
     { [`move-left-${level}`]: moveDirection === 3 && clickedIndex === index + 1 },
   )
   return (
@@ -87,7 +88,6 @@ const Tile = props => {
             index={element}
             onClick={onTileClick(gameMatrix, index, level, moveCount, moveAction)}
           />
-          {index === 0 && <br />}
         </>
       : <>
           <TileEmpty
@@ -95,7 +95,6 @@ const Tile = props => {
             level={level}
             index={element}
           />
-          {index === 0 && <br />}
         </>
   )
 }
