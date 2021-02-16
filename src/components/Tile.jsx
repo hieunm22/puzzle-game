@@ -7,22 +7,23 @@ import {
 } from '../actions'
 import { moveTile } from '../common/helper'
 import styled from 'styled-components'
+import { WIDTH, HEIGHT } from '../common/constants'
 
-const rootsWidth = 420  // #root element's width
+const rootsWidth = 360  // #root element's width
 
-const onTileClick = (gameMatrix, index, level, moveCount, moveAction) => e => {
-  const result = moveTile(gameMatrix, index, level)
+const onTileClick = (gameMatrix, index, moveCount, moveAction) => e => {
+  const result = moveTile(gameMatrix, index)
   if (result.cloneGameMatrix.toString() !== gameMatrix.toString()) {
     moveAction(result.cloneGameMatrix, moveCount + 1, index, result.moveDirection)
   }
 }
 
 const setBackgroundPosition = props => {
-  const { index, level } = props
+  const { index } = props
   const width = window.innerWidth >= rootsWidth ? rootsWidth : window.innerWidth
-  const x = (index - 1) % level
-  const y = Math.floor((index - 1) / level)
-  const step = width / level
+  const x = (index - 1) % WIDTH
+  const y = Math.floor((index - 1) / WIDTH)
+  const step = width / WIDTH  // HEIGHT???
   const bgx = x === 0 ? '0' : `-${step * x}px`
   const bgy = y === 0 ? '0' : `-${step * y}px`
   return `${bgx} ${bgy}`
@@ -30,35 +31,33 @@ const setBackgroundPosition = props => {
 
 const TileWithImage = styled('div')(props =>
   ({
-    backgroundImage: `url(${require('../imgs/background1.jpg').default})`,
-    backgroundSize: 
+    backgroundImage: `url(${require(`../imgs/${props.imageUrl}`).default})`,
+    backgroundSize:
       window.innerWidth >= rootsWidth
         ? rootsWidth + 'px'
         : `${window.innerWidth}px`,
     backgroundPosition: setBackgroundPosition(props),
-    cursor: 'pointer',
-    width: `calc(100% / ${props.level} - 2px)`,
-    height: 
+    width: `calc(100% / ${WIDTH} - 2px)`,
+    height:
       window.innerWidth >= rootsWidth
-        ? `${rootsWidth / props.level}px`
-        : `${window.innerWidth / props.level}px`,
+        ? `${rootsWidth / WIDTH}px`
+        : `${window.innerWidth / WIDTH}px`,
   })
 )
 
-const TileEmpty = styled('div')(props =>
+const TileEmpty = styled('div')(_ =>
   ({
-    width: `calc(100% / ${props.level} - 2px)`,
-    height: 
-      window.innerWidth >= rootsWidth 
-        ? `${rootsWidth / props.level}px`
-        : `${window.innerWidth / props.level}px`,
+    width: `calc(100% / ${WIDTH} - 2px)`,
+    height:
+      window.innerWidth >= rootsWidth
+        ? `${rootsWidth / WIDTH}px`
+        : `${window.innerWidth / WIDTH}px`,
   })
 )
 
 const Tile = props => {
-  const { 
+  const {
     index,
-    level,
     gameMatrix,
     clickedIndex,
     moveDirection,
@@ -66,35 +65,32 @@ const Tile = props => {
     moveAction
   } = props
   const element = gameMatrix[index]
-  const matrixArea = level * level
+  const matrixArea = WIDTH * HEIGHT
 
   const mainClass = classNames(
-    { [`inline tile__container content-${element}`]: true },
-    { [`move-top-${level}`]: 
-      (moveDirection === 0 && clickedIndex === index + level) 
+    { [`inline tile__container`]: true },
+    // { [`inline tile__container content-${element}`]: true },
+    { [`move-top`]:
+      (moveDirection === 0 && clickedIndex === index + WIDTH)
       || (moveDirection === -1 && index === matrixArea + 1) },
-    { [`move-right-${level}`]: moveDirection === 1 && clickedIndex === index - 1 },
-    { [`move-bottom-${level}`]: 
-      (moveDirection === 2 && clickedIndex === index - level)
-      || (moveDirection === -2 && index === level * level - level + 1) },
-    { [`move-left-${level}`]: moveDirection === 3 && clickedIndex === index + 1 },
+    { [`move-right`]: moveDirection === 1 && clickedIndex === index - 1 },
+    { [`move-bottom`]:
+      (moveDirection === 2 && clickedIndex === index - WIDTH)
+      || (moveDirection === -2 && index === WIDTH * HEIGHT - WIDTH + 1) },
+    { [`move-left`]: moveDirection === 3 && clickedIndex === index + 1 },
   )
   return (
     element !== 0
       ? <>
           <TileWithImage
             className={mainClass}
-            level={level}
             index={element}
-            onClick={onTileClick(gameMatrix, index, level, moveCount, moveAction)}
+            imageUrl={props.imageUrl}
+            onClick={onTileClick(gameMatrix, index, moveCount, moveAction)}
           />
         </>
       : <>
-          <TileEmpty
-            className={mainClass}
-            level={level}
-            index={element}
-          />
+          <TileEmpty className={mainClass} />
         </>
   )
 }
@@ -105,14 +101,14 @@ const actions = {
 }
 
 const mapToProps = ({
-  level,
   gameMatrix,
+  imageUrl,
   clickedIndex,
   moveDirection,
   moveCount
 }) => ({
-  level,
   gameMatrix,
+  imageUrl,
   clickedIndex,
   moveDirection,
   moveCount

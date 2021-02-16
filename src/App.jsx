@@ -4,14 +4,14 @@ import './style'
 import {
   newGame
 } from './actions'
-import GameLevel from './components/GameLevel'
 import GameContent from './components/GameContent'
+import GamePortrait from './components/GamePortrait'
 
 class App extends Component {
   render() {
     if (this.props.status === 0) return (
       <>
-        <GameLevel />
+        <GamePortrait />
       </>
     )
     return (

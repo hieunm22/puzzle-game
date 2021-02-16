@@ -1,8 +1,8 @@
 @media screen and (min-width: 400px) {
-  @keyframes move-right-6 {
+  @keyframes move-right {
     0% {
       position: relative;
-      left: -70px;
+      left: -100px;
     }
     100% {
       position: relative;
@@ -10,14 +10,14 @@
     }
   }
 
-  .move-right-6 {
-    animation: move-right-6 0.12s;
+  .move-right {
+    animation: move-right 0.12s;
   }
 
-  @keyframes move-left-6 {
+  @keyframes move-left {
     0% {
       position: relative;
-      right: -70px;
+      right: -100px;
     }
     100% {
       position: relative;
@@ -25,14 +25,14 @@
     }
   }
 
-  .move-left-6 {
-    animation: move-left-6 0.12s;
+  .move-left {
+    animation: move-left 0.12s;
   }
 
-  @keyframes move-top-6 {
+  @keyframes move-top {
     0% {
       position: relative;
-      bottom: -70px;
+      bottom: -100px;
     }
     100% {
       position: relative;
@@ -40,14 +40,14 @@
     }
   }
 
-  .move-top-6 {
-    animation: move-top-6 0.12s;
+  .move-top {
+    animation: move-top 0.12s;
   }
 
-  @keyframes move-bottom-6 {
+  @keyframes move-bottom {
     0% {
       position: relative;
-      top: -70px;
+      top: -100px;
     }
     100% {
       position: relative;
@@ -55,195 +55,7 @@
     }
   }
 
-  .move-bottom-6 {
-    animation: move-bottom-6 0.12s;
+  .move-bottom {
+    animation: move-bottom 0.12s;
   }
-
-  /* --------------------------------------------------- */
-
-  @keyframes move-right-5 {
-    0% {
-      position: relative;
-      left: -84px;
-    }
-    100% {
-      position: relative;
-      left: 0;
-    }
-  }
-
-  .move-right-5 {
-    animation: move-right-5 0.12s;
-  }
-
-  @keyframes move-left-5 {
-    0% {
-      position: relative;
-      right: -84px;
-    }
-    100% {
-      position: relative;
-      right: 0;
-    }
-  }
-
-  .move-left-5 {
-    animation: move-left-5 0.12s;
-  }
-
-  @keyframes move-top-5 {
-    0% {
-      position: relative;
-      bottom: -84px;
-    }
-    100% {
-      position: relative;
-      bottom: 0;
-    }
-  }
-
-  .move-top-5 {
-    animation: move-top-5 0.12s;
-  }
-
-  @keyframes move-bottom-5 {
-    0% {
-      position: relative;
-      top: -84px;
-    }
-    100% {
-      position: relative;
-      top: 0;
-    }
-  }
-
-  .move-bottom-5 {
-    animation: move-bottom-5 0.12s;
-  }
-
-  /* --------------------------------------------------- */
-
-  @keyframes move-right-4 {
-    0% {
-      position: relative;
-      left: -105px;
-    }
-    100% {
-      position: relative;
-      left: 0;
-    }
-  }
-
-  .move-right-4 {
-    animation: move-right-4 0.12s;
-  }
-
-  @keyframes move-left-4 {
-    0% {
-      position: relative;
-      right: -105px;
-    }
-    100% {
-      position: relative;
-      right: 0;
-    }
-  }
-
-  .move-left-4 {
-    animation: move-left-4 0.12s;
-  }
-
-  @keyframes move-top-4 {
-    0% {
-      position: relative;
-      bottom: -105px;
-    }
-    100% {
-      position: relative;
-      bottom: 0;
-    }
-  }
-
-  .move-top-4 {
-    animation: move-top-4 0.12s;
-  }
-
-  @keyframes move-bottom-4 {
-    0% {
-      position: relative;
-      top: -105px;
-    }
-    100% {
-      position: relative;
-      top: 0;
-    }
-  }
-
-  .move-bottom-4 {
-    animation: move-bottom-4 0.12s;
-  }
-
-  /* --------------------------------------------------- */
-
-  @keyframes move-right-3 {
-    0% {
-      position: relative;
-      left: -140px;
-    }
-    100% {
-      position: relative;
-      left: 0;
-    }
-  }
-
-  .move-right-3 {
-    animation: move-right-3 0.12s;
-  }
-
-  @keyframes move-left-3 {
-    0% {
-      position: relative;
-      right: -140px;
-    }
-    100% {
-      position: relative;
-      right: 0;
-    }
-  }
-
-  .move-left-3 {
-    animation: move-left-3 0.12s;
-  }
-
-  @keyframes move-top-3 {
-    0% {
-      position: relative;
-      bottom: -140px;
-    }
-    100% {
-      position: relative;
-      bottom: 0;
-    }
-  }
-
-  .move-top-3 {
-    animation: move-top-3 0.12s;
-  }
-
-  @keyframes move-bottom-3 {
-    0% {
-      position: relative;
-      top: -140px;
-      /* top: -calc(var(--width) / 3 - 2px); */
-    }
-    100% {
-      position: relative;
-      top: 0;
-    }
-  }
-
-  .move-bottom-3 {
-    animation: move-bottom-3 0.12s;
-  }
-
 }

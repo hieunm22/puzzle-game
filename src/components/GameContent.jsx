@@ -1,24 +1,21 @@
 import React, { useEffect } from 'react'
 import { connect } from "redux-zero/react"
-import { 
+import {
   moveAction,
   selectLevel
 } from '../actions'
 import { shuffle } from '../common/helper'
 import Tile from './Tile'
+import PopupResult from './PopupResult'
 
-const showSettings = e => {
-
-}
-
-const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) => {
+const GameContent = ({ gameMatrix, moveCount, selectLevel, moveAction }) => {
   const restartGame = () => {
-    const shuffleArray = shuffle(level)
+    const shuffleArray = shuffle()
     moveAction(shuffleArray, 0)
   }
 
-  useEffect(restartGame, [level, moveAction])
-  
+  useEffect(restartGame, [moveAction])
+
   return (
     <>
       <div className="flex content__actions">
@@ -26,10 +23,7 @@ const GameContent = ({ level, gameMatrix, moveCount, selectLevel, moveAction }) 
           <i className="fas fa-arrow-left" />
           <span className="icon-text" content="Select level" />
         </div>
-        <div className="content__actions-game flex settings" onClick={showSettings}>
-          <i className="fas fa-cog" />
-          <span className="icon-text" content="Settings" />
-        </div>
+        <PopupResult />
         <div className="content__actions-game flex restart" onClick={restartGame}>
           <i className="fas fa-undo" />
           <span className="icon-text" content="Restart" />
@@ -49,11 +43,9 @@ const actions = {
 }
 
 const mapToProps = ({
-  level,
   gameMatrix,
   moveCount,
 }) => ({
-  level,
   gameMatrix,
   moveCount,
 })

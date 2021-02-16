@@ -3,6 +3,10 @@ export const newGame = (_, level) => ({
   level
 })
 
+export const setImage = (_, imageUrl) => ({
+  imageUrl
+})
+
 export const selectLevel = _ => ({
   status: 0
 })
