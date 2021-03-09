@@ -5,6 +5,7 @@ const initialState = {
   clickedIndex: -1,
   moveDirection: null,
   level: null,
+  imageUrl: null,
   gameMatrix: [],
   moveCount: 0
 }

@@ -5,6 +5,11 @@ const GAME_LEVELS = [
   { Index: 3, Size: 6, LevelName: 'Very Hard' },
 ]
 
+const WIDTH = 3
+const HEIGHT = 5
+
 export {
   GAME_LEVELS,
+  WIDTH,
+  HEIGHT
 }
