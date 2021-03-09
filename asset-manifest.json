@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/puzzle-game/static/css/main.be90507a.chunk.css",
+    "main.js": "/puzzle-game/static/js/main.1ba572a4.chunk.js",
+    "main.js.map": "/puzzle-game/static/js/main.1ba572a4.chunk.js.map",
+    "runtime-main.js": "/puzzle-game/static/js/runtime-main.646b2735.js",
+    "runtime-main.js.map": "/puzzle-game/static/js/runtime-main.646b2735.js.map",
+    "static/css/2.9fe31628.chunk.css": "/puzzle-game/static/css/2.9fe31628.chunk.css",
+    "static/js/2.d496de7d.chunk.js": "/puzzle-game/static/js/2.d496de7d.chunk.js",
+    "static/js/2.d496de7d.chunk.js.map": "/puzzle-game/static/js/2.d496de7d.chunk.js.map",
+    "static/js/3.120fae20.chunk.js": "/puzzle-game/static/js/3.120fae20.chunk.js",
+    "static/js/3.120fae20.chunk.js.map": "/puzzle-game/static/js/3.120fae20.chunk.js.map",
+    "index.html": "/puzzle-game/index.html",
+    "static/css/2.9fe31628.chunk.css.map": "/puzzle-game/static/css/2.9fe31628.chunk.css.map",
+    "static/css/main.be90507a.chunk.css.map": "/puzzle-game/static/css/main.be90507a.chunk.css.map",
+    "static/js/2.d496de7d.chunk.js.LICENSE.txt": "/puzzle-game/static/js/2.d496de7d.chunk.js.LICENSE.txt",
+    "static/media/background1.jpg": "/puzzle-game/static/media/background1.deff24df.jpg",
+    "static/media/background2.jpg": "/puzzle-game/static/media/background2.e5fee3c8.jpg",
+    "static/media/background3.jpg": "/puzzle-game/static/media/background3.42cd7c34.jpg",
+    "static/media/background4.jpg": "/puzzle-game/static/media/background4.e0229ab0.jpg",
+    "static/media/background5.jpg": "/puzzle-game/static/media/background5.670c0b7e.jpg",
+    "static/media/background6.jpg": "/puzzle-game/static/media/background6.1fbaf01d.jpg",
+    "static/media/background7.jpg": "/puzzle-game/static/media/background7.6ea1b934.jpg",
+    "static/media/background8.jpg": "/puzzle-game/static/media/background8.9e559372.jpg",
+    "static/media/background9.jpg": "/puzzle-game/static/media/background9.2be8f89c.jpg",
+    "static/media/all.css": "/puzzle-game/static/media/fa-solid-900.46fdbd2d.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.646b2735.js",
+    "static/css/2.9fe31628.chunk.css",
+    "static/js/2.d496de7d.chunk.js",
+    "static/css/main.be90507a.chunk.css",
+    "static/js/main.1ba572a4.chunk.js"
+  ]
+}
