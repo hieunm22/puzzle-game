@@ -23,7 +23,9 @@ const GameContent = ({ gameMatrix, moveCount, selectLevel, moveAction }) => {
           <i className="fas fa-arrow-left" />
           <span className="icon-text" content="Select level" />
         </div>
+        &nbsp;
         <PopupResult />
+        &nbsp;
         <div className="content__actions-game flex restart" onClick={restartGame}>
           <i className="fas fa-undo" />
           <span className="icon-text" content="Restart" />

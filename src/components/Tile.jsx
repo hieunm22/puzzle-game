@@ -9,7 +9,7 @@ import { moveTile } from '../common/helper'
 import styled from 'styled-components'
 import { WIDTH, HEIGHT } from '../common/constants'
 
-const rootsWidth = 360  // #root element's width
+const rootsWidth = 240  // #root element's width
 
 const onTileClick = (gameMatrix, index, moveCount, moveAction) => e => {
   const result = moveTile(gameMatrix, index)
