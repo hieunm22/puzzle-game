@@ -10,12 +10,12 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "classnames": "^2.2.6",
-    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "reactjs-popup": "^2.0.4",
     "redux-zero": "^5.1.7",
+    "sass": "^1.35.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
@@ -24,8 +24,6 @@
     "build": "react-scripts build",
     "publish": "react-scripts build && mv build html && rm html/static/js/*.map && docker cp html/ nginx_puzzle:/usr/share/nginx && rm -rf html",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
   }
 }
