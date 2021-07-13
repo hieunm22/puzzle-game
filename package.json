@@ -1,7 +1,6 @@
 {
   "name": "puzzle-game",
   "version": "0.1.0",
-  "homepage": "https://hieunm22.github.io/puzzle-game/",
   "react": "jsx",
   "private": true,
   "dependencies": {
@@ -15,7 +14,6 @@
     "react-scripts": "4.0.0",
     "reactjs-popup": "^2.0.4",
     "redux-zero": "^5.1.7",
-    "sass": "^1.35.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
