@@ -1,7 +1,6 @@
 {
   "name": "puzzle-game",
   "version": "0.1.0",
-  "homepage": "https://hieunm22.github.io/puzzle-game/",
   "react": "jsx",
   "private": true,
   "dependencies": {
