@@ -1,13 +1,7 @@
-FROM node:14
-
+FROM nginx:alpine
 WORKDIR /app
-COPY . .
-RUN npm install
-RUN npm run build
-RUN npm install -g serve
-# RUN apt-get update -y
-# RUN apt-get install -y xsel
-
-EXPOSE 5000
-
-CMD ["serve", "-s", "-n", "--ssl-cert=ssl/localhost.crt", "--ssl-key=ssl/localhost.key", "build"]
+COPY ./build /app/html
+COPY ./deploy /etc/nginx
+RUN ln -s /etc/nginx/sites-available/puzzle-game /etc/nginx/sites-enabled
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
