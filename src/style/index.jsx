@@ -1,2 +1,2 @@
-import './App.css'
-import './animation.css'
+import "./App.css"
+import "./animation.css"

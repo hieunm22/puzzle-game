@@ -1,12 +1,9 @@
-import React from 'react'
+import React from "react"
 import { connect } from "redux-zero/react"
-import {
-  newGame
-} from '../actions'
-import ImageListView from './PopupSelectImage';
+import { newGame } from "../actions"
+import ImageListView from "./PopupSelectImage"
 
 const GameImage = ({ imageUrl, newGame }) => {
-
   const startGame = e => {
     newGame(imageUrl)
   }
@@ -17,14 +14,16 @@ const GameImage = ({ imageUrl, newGame }) => {
     <>
       <div className="header__game-images">
         <ImageListView />
-        {imageUrl && <img
-          className="center"
-          src={imageSource}
-          width={300}
-          height={500}
-          alt={imageUrl}
-          title={imageUrl}
-        />}
+        {imageUrl && (
+          <img
+            className="center"
+            src={imageSource}
+            width={300}
+            height={500}
+            alt={imageUrl}
+            title={imageUrl}
+          />
+        )}
       </div>
       <div className="header__submit">
         <button
@@ -43,10 +42,7 @@ const actions = {
   newGame
 }
 
-const mapToProps = ({
-  status,
-  imageUrl
-}) => ({
+const mapToProps = ({ status, imageUrl }) => ({
   status,
   imageUrl
 })
