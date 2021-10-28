@@ -9,6 +9,7 @@ import GamePortrait from './components/GamePortrait'
 
 class App extends Component {
   render() {
+    console.log("hello world");
     if (this.props.status === 0) return (
       <>
         <GamePortrait />
