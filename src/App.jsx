@@ -9,6 +9,7 @@ class App extends Component {
   render() {
     console.log("hello world")
     console.log("hello world v2")
+    console.log("hello world v3")
     if (this.props.status === 0) return <GamePortrait />
     return <GameContent />
   }
