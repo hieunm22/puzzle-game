@@ -51,8 +51,10 @@
     "prettier": "^2.3.2"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write"
+    "*.jsx": [
+      "prettier --write .",
+      "eslint src/**/*.jsx .",
+      "git add ."
     ]
   }
 }

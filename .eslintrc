@@ -157,10 +157,7 @@
     "semi-spacing": [1, { "before": false, "after": true }], // enforce spacing before and after semicolons
     "sort-vars": 0, // sort variables within the same declaration block (off by default)
     "space-before-blocks": [1, "always"], // require or disallow space before blocks (off by default)
-    "max-lines": [
-      "error",
-      200
-    ],
+    "max-lines": ["error", 200],
     "space-before-function-paren": [
       1,
       { "anonymous": "always", "named": "never" }
