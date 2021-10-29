@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { connect } from "redux-zero/react"
 import { GAME_LEVELS } from "../common/constants"
-import classNames from 'classnames/bind'
-import { 
-  newGame
-} from '../actions'
+import classNames from "classnames/bind"
+import { newGame } from "../actions"
 
 const GameLevel = ({ level, newGame }) => {
   const [selectedLevel, setSelectedLevel] = useState(level)
@@ -12,8 +10,7 @@ const GameLevel = ({ level, newGame }) => {
   const setLevel = level => e => {
     if (selectedLevel !== level) {
       setSelectedLevel(level)
-    }
-    else {
+    } else {
       startGame(level)
     }
   }
@@ -28,18 +25,23 @@ const GameLevel = ({ level, newGame }) => {
       <div className="header__game-levels">
         {GAME_LEVELS.map((element, index) => {
           const classLevel = classNames(
-            { 'flex header__level': true },
-            { 'selected': index === selectedLevel - 3 }
+            { "flex header__level": true },
+            { selected: index === selectedLevel - 3 }
           )
           return (
-            <div 
+            <div
               className={classLevel}
               key={index}
               onClick={setLevel(element.Size)}
             >
-              <span className="header__level-size" content={`${element.Size} * ${element.Size}`} />
-              <span className="header__level-name" content={element.LevelName} />
-              
+              <span
+                className="header__level-size"
+                content={`${element.Size} * ${element.Size}`}
+              />
+              <span
+                className="header__level-name"
+                content={element.LevelName}
+              />
             </div>
           )
         })}
@@ -61,10 +63,7 @@ const actions = {
   newGame
 }
 
-const mapToProps = ({
-  status,
-  level
-}) => ({
+const mapToProps = ({ status, level }) => ({
   status,
   level
 })

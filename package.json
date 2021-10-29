@@ -20,6 +20,7 @@
     "eject": "react-scripts eject",
     "format": "prettier --write .",
     "lint": "eslint src/**/*.jsx .",
+    "precommit": "lint-staged",
     "lint:fix": "eslint src/**/*.jsx --fix",
     "prepare": "husky install"
   },
@@ -51,8 +52,8 @@
   },
   "lint-staged": {
     "*.jsx": [
-      "eslint . --fix",
-      "prettier --write src/",
+      "prettier --write .",
+      "eslint src/**/*.jsx .",
       "git add ."
     ]
   }

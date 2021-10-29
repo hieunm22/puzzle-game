@@ -19,9 +19,15 @@ export const setMoveCountAction = (_, moveCount) => ({
   moveCount
 })
 
-export const moveAction = (_, gameMatrix, moveCount, clickedIndex, moveDirection) => ({
+export const moveAction = (
+  _,
   gameMatrix,
   moveCount,
   clickedIndex,
-  moveDirection,
+  moveDirection
+) => ({
+  gameMatrix,
+  moveCount,
+  clickedIndex,
+  moveDirection
 })
