@@ -14,9 +14,6 @@ class App extends Component {
   }
 }
 
-// const mapToProps = ({
-// }) => ({
-// })
 const actions = {
   newGame
 }

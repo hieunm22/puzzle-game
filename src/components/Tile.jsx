@@ -84,14 +84,12 @@ const Tile = props => {
     { ["move-left"]: moveDirection === 3 && clickedIndex === index + 1 }
   )
   return element !== 0 ? (
-    <>
-      <TileWithImage
-        className={mainClass}
-        index={element}
-        imageUrl={props.imageUrl}
-        onClick={onTileClick(gameMatrix, index, moveCount, moveAction)}
-      />
-    </>
+    <TileWithImage
+      className={mainClass}
+      index={element}
+      imageUrl={props.imageUrl}
+      onClick={onTileClick(gameMatrix, index, moveCount, moveAction)}
+    />
   ) : (
     <>
       <TileEmpty className={mainClass} />
