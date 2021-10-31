@@ -91,9 +91,7 @@ const Tile = props => {
       onClick={onTileClick(gameMatrix, index, moveCount, moveAction)}
     />
   ) : (
-    <>
-      <TileEmpty className={mainClass} />
-    </>
+    <TileEmpty className={mainClass} />
   )
 }
 
