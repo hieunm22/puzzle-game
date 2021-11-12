@@ -1,7 +1,10 @@
+FROM node:14.18.1-alpine as build-stage
+COPY . .
+RUN yarn
+RUN yarn build --production
+
 FROM nginx:alpine
-WORKDIR /app
-COPY ./build /app/html
-COPY ./deploy /etc/nginx
-RUN ln -s /etc/nginx/sites-available/puzzle-game /etc/nginx/sites-enabled
+COPY ./deploy/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build-stage ./build /usr/share/nginx/html
 EXPOSE 80
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]

@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
@@ -18,16 +18,22 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write .",
-    "lint": "eslint src/**/*.jsx .",
+    "format": "prettier --write \"src/**/*.jsx\"",
+    "lint": "eslint src --ext .jsx .",
     "precommit": "lint-staged",
-    "lint:fix": "eslint src/**/*.jsx --fix",
+    "lint:fix": "eslint src --ext .jsx --fix",
     "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --config .prettierrc . --ext .{jsx,json} --write"
+      "pre-commit": "lint-staged"
     }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -47,14 +53,13 @@
     "eslint-plugin-import-newlines": "^1.1.3",
     "eslint-plugin-react": "7.24.0",
     "husky": "^7.0.0",
-    "lint-staged": ">=10",
+    "lint-staged": "^11.2.3",
     "prettier": "^2.3.2"
   },
   "lint-staged": {
     "*.jsx": [
-      "prettier --write .",
-      "eslint src/**/*.jsx .",
-      "git add ."
+      "eslint --fix .",
+      "prettier --write ."
     ]
   }
 }
