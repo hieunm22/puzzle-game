@@ -1,0 +1,24 @@
+.action-button {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 120px;
+	height: var(--button-height);
+	padding: 0 5px;
+	border: none;
+	border-radius: var(--radius);
+	background-color: var(--color-accent);
+	color: white;
+	font-family: inherit;
+	font-size: 10px;
+	cursor: pointer;
+
+	&:not(:disabled):hover {
+		opacity: 0.7;
+	}
+
+	&:disabled {
+		background-color: var(--color-disabled);
+		cursor: not-allowed;
+	}
+}

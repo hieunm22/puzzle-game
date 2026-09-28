@@ -1,0 +1,16 @@
+:root {
+	--width: 240px;
+	// the board fills the root and shrinks with a narrow viewport
+	--board-width: min(var(--width), 100vw);
+
+	--color-text: #575757;
+	--color-accent: rgb(172, 120, 53);
+	--color-disabled: #d9d9dd;
+	--color-hover: #d6d6d6;
+	--color-selected: #c3c3c3;
+	--color-tile-border: gray;
+
+	--button-height: 35px;
+	--radius: 5px;
+	--tile-slide-distance: 70px;
+}

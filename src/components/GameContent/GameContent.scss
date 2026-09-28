@@ -1,0 +1,29 @@
+.game-content {
+	&__actions {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 5px;
+	}
+
+	&__back {
+		width: 105px;
+	}
+
+	&__restart {
+		width: 75px;
+	}
+
+	&__board {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		background-color: var(--color-accent);
+	}
+
+	&__move-count {
+		text-align: right;
+		margin: 15px 15px 0 0;
+	}
+}

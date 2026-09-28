@@ -1,7 +1,7 @@
-FROM node:14.18.1-alpine as build-stage
+FROM node:24-alpine as build-stage
 COPY . .
 RUN yarn
-RUN yarn build --production
+RUN yarn build
 
 FROM nginx:alpine
 COPY ./deploy/nginx.conf /etc/nginx/conf.d/default.conf

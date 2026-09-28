@@ -1,0 +1,18 @@
+.modal-popup {
+	&__body {
+		max-height: 80vh;
+		height: 520px;
+		overflow-y: scroll;
+	}
+
+	&__close,
+	&__trigger {
+		margin: 10px auto;
+	}
+
+	// reactjs-popup suffixes the className it is given with -content
+	&__popup-content {
+		min-width: 320px;
+		max-width: 500px;
+	}
+}

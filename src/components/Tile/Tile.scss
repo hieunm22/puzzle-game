@@ -1,0 +1,43 @@
+// a tile sliding towards a direction starts offset on the opposite side
+$slide-offsets: (
+	top: bottom,
+	right: left,
+	bottom: top,
+	left: right
+);
+
+.tile {
+	--tile-size: calc(var(--board-width) / var(--board-columns));
+
+	width: calc(100% / var(--board-columns) - 2px);
+	height: var(--tile-size);
+	border: solid 1px var(--color-tile-border);
+	background-image: var(--tile-image);
+	background-size: var(--board-width);
+	background-position: calc(-1 * var(--tile-x) * var(--tile-size))
+		calc(-1 * var(--tile-y) * var(--tile-size));
+	cursor: pointer;
+
+	&--empty {
+		cursor: default;
+	}
+
+	@each $direction, $side in $slide-offsets {
+		&--move-#{$direction} {
+			animation: tile-move-#{$direction} 0.12s;
+		}
+	}
+}
+
+@each $direction, $side in $slide-offsets {
+	@keyframes tile-move-#{$direction} {
+		0% {
+			position: relative;
+			#{$side}: calc(-1 * var(--tile-slide-distance));
+		}
+		100% {
+			position: relative;
+			#{$side}: 0;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.game-level {
+	&__title {
+		text-align: center;
+		font-size: 15pt;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__levels {
+		margin-left: 10px;
+		max-width: calc(100% - 20px);
+	}
+
+	&__level {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 30px;
+		line-height: 30px;
+		border-radius: var(--radius);
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--color-hover);
+		}
+
+		&--selected {
+			background-color: var(--color-selected);
+		}
+	}
+
+	&__level-size {
+		margin-left: 15px;
+	}
+
+	&__level-name {
+		visibility: hidden;
+		margin-right: 15px;
+	}
+
+	// the name only shows on the row being pointed at or picked
+	&__level:hover &__level-name,
+	&__level--selected &__level-name {
+		visibility: visible;
+	}
+
+	&__start {
+		width: 100px;
+		margin: 10px auto 0;
+	}
+}
